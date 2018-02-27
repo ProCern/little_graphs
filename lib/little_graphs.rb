@@ -42,9 +42,7 @@ class LittleGraphs
     point_space = height/(datapoints.max - datapoints.min + 1)
 
     datapoints.map do |datapoint|
-      puts @height
-      @height - (datapoint - datapoints.min) * point_space 
+      @height - (datapoint - datapoints.min) * point_space
     end
   end
-
 end
