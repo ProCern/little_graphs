@@ -5,9 +5,11 @@ Gem::Specification.new do |s|
   s.summary   = 'Sparklines'
   s.authors   = ['J. Cheng']
   s.email     = 'jcheng@absolute-performance.com'
-  s.files     = [`git ls-files`.split($\)]
   s.test_files  = s.files.grep(%r{^(test|spec|features)/})
   s.homepage  = 'http://github.com/joannecheng/little_graphs'
+
+  s.files         = Dir['lib/**/*.rb', 'bin/*'].sort!
+  s.executables   = Dir['bin/*'].map(&File.method(:basename)).sort!
 
   s.add_dependency "quick_magick"
 end
